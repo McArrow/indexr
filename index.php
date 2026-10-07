@@ -524,7 +524,7 @@ if (isset($fileName)):
 						<select name="ext" onchange="this.form.submit();">
 							<option value="">----</option>
 							<?php foreach ($extensions as $extension => $count): ?>
-								<option value="<?= htmlspecialchars($extension) ?>" <?= (($selectedExtension == $extension) ? 'selected="selected"' : '') ?>>.<?= htmlspecialchars($extension) ?> (<?= $count . (1 == $count ? ' file' : ' files') ?>)</option>
+								<option value="<?php echo htmlspecialchars($extension) ?>" <?php echo (($selectedExtension == $extension) ? 'selected="selected"' : '') ?>>.<?php echo htmlspecialchars($extension) ?> (<?php echo $count . (1 == $count ? ' file' : ' files') ?>)</option>
 							<?php endforeach; ?>
 						</select>
 						<input type="submit" value="Apply" id="filterSubmitButton" />
